@@ -6,13 +6,17 @@ class MainController < ApplicationController
       name = params[:name]
       url = "http://twitter.com/users/show/" + name + ".json"
       result = HTTParty.get(url)
-      followers = result.fetch("followers_count")
-      if followers > 250000
-        result = "yes"
+      if (result.to_s.include? "DOCTYPE")
+        render :new
       else
-        result = "no"
+        followers = result.fetch("followers_count")
+        if followers > 250000
+          result = "yes"
+        else
+          result = "no"
+        end
+        @results = result
       end
-      @results = result
     end
   end
   

@@ -15,7 +15,7 @@
   text-align: center;
 }
 
-h1, input[type="submit"] {
+h1 {
   font-family: BebasNeue;
   font-size: 3em;
   text-align: center;
@@ -23,6 +23,19 @@ h1, input[type="submit"] {
   letter-spacing: -0.05em;
   margin: 0.1em;
   display:inline;
+}
+
+input[type="submit"] {
+  font-family: BebasNeue;
+  font-size: 1em;
+  text-align: center;
+  word-spacing: 0.3em;
+  letter-spacing: -0.05em;
+  margin: 0.1em;
+  display:inline;
+  background: white;
+  border: none;
+  cursor: pointer;
 }
 
 input#name {
