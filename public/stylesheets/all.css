@@ -1,8 +1,6 @@
 @font-face {
   font-family: BebasNeue;
-  src: url('BEBAS.ttf');
-  src: url('/BEBAS.ttf');
-  src: local("☺"), url('BEBAS.ttf') format('ttf'), url('/BEBAS.ttf') format('ttf');
+  src: url("BEBAS.ttf");
 }
 
 .container {
