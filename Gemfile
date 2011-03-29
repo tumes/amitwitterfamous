@@ -9,6 +9,8 @@ gem 'inherited_resources', '1.1.2'
 gem 'simple_form'
 gem 'nested_form'
 gem 'cocoon'
+gem 'curb'
+gem 'curl'
 gem 'httparty'
 
 group :development do
