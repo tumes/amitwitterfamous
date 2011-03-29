@@ -1,0 +1,43 @@
+@font-face {
+  font-family: BebasNeue;
+  src: url('/BEBAS.ttf');
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.box {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-family: BebasNeue;
+  font-size: 3em;
+  text-align: center;
+  word-spacing: 0.3em;
+  letter-spacing: -0.05em;
+  margin: 0.1em;
+  display:inline;
+}
+
+input#name {
+  border: 0px;
+  border-bottom: 5px solid black;
+  font-family: BebasNeue;
+  font-size: 1em;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+input#name:focus {
+  outline: none;
+}
+
