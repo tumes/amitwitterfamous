@@ -25,6 +25,11 @@ h1 {
   display:inline;
 }
 
+h1#neon{
+  color: red;
+  text-shadow: black 4px 4px 4px;
+}
+
 input[type="submit"] {
   font-family: BebasNeue;
   font-size: 1em;

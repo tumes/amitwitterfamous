@@ -10,12 +10,13 @@ class MainController < ApplicationController
         redirect_to root_path
       else
         followers = result.fetch("followers_count")
+        following = result.fetch("friends_count")
         if followers > 250000
-          result = "yes"
+          fame_level = "you are a twitter superstar"
         else
-          result = "no"
+          fame_level = "no"
         end
-        @results = result
+        @fame_level = fame_level
       end
     end
   end
