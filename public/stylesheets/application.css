@@ -63,6 +63,7 @@ h1#neon{
 }
 
 input[type="submit"] {
+  font-family: BebasNeue;
   font-size: 1em;
   text-align: center;
   word-spacing: 0.3em;
