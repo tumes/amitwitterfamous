@@ -1,5 +1,8 @@
 class MainController < ApplicationController
   
+  def about
+  end
+  
   def home
     if params[:name].blank?
     else
