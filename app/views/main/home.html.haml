@@ -1,13 +1,5 @@
 - if params[:name].blank?
-  %br
-  %br
-  %br
-  %br
-  %br
-  %br
-  %br
-  %br
-  %br
+  .spacer
   .container
     %h1 Am I Twitter Famous?
     %br/
@@ -17,16 +9,7 @@
       %h1= text_field_tag :name, nil, :size => 12
       %h1= submit_tag(">")
 - else
-  %br
-  %br
-  %br
-  %br
-  %br
-  %br
-  %br
-  %br
-  %br
-  %br
+  .spacer
   .container
     %h1= @fame_level
   
