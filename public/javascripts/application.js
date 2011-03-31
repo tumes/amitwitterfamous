@@ -10,7 +10,10 @@ $(document).ready(function(){
 
 $('input#famebutton').click( function() {
   var twitter_name = $("input#fameinput").val();
-    if (twitter_name != active_twitter_name) {
+    if (twitter_name == "") {
+      result_appender("please enter a twitter username")
+    }
+    else if (twitter_name != active_twitter_name) {
       $(".container#padded").fadeOut(300);
       $(".spacer").animate({ height: "50px"}, 600);
         $.ajax({
@@ -24,8 +27,6 @@ $('input#famebutton').click( function() {
             active_twitter_name = twitter_name
           }
         });
-    }
-    else {
     };  
     return false
   });
