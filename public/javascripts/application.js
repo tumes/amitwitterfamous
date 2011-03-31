@@ -11,6 +11,7 @@ $(document).ready(function(){
 $('input#famebutton').click( function() {
   var twitter_name = $("input#fameinput").val();
     if (twitter_name != active_twitter_name) {
+      $(".container#padded").fadeOut(300);
       $(".spacer").animate({ height: "50px"}, 600);
         $.ajax({
           dataType: "json",

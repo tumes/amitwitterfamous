@@ -5,13 +5,12 @@ class MainController < ApplicationController
   end
   
   def home
-    if params[:name].blank?
-    else
+    if params[:name].present?
       name = params[:name]
       url = make_url(name)
       user_info = grab_userpage(url)
       if user_info.header.to_s.include? "HTTPNotFound"
-        redirect_to root_path
+        @fame_level = "please enter a valid twitter username"
       else
         @fame_level = evaluate_fame(user_info)
       end
