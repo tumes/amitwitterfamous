@@ -1,4 +1,5 @@
 class MainController < ApplicationController
+  respond_to :json, :html, :only => :home
   
   def about
   end
@@ -14,6 +15,11 @@ class MainController < ApplicationController
       else
         @fame_level = evaluate_fame(user_info)
       end
+    end
+    
+    respond_to do |format|
+      format.html
+      format.json { render :json => @fame_level.to_json }
     end
   end
   
@@ -34,6 +40,8 @@ class MainController < ApplicationController
         "you are a twitter superstar"
       elsif (followers > 10000) && (followers < 250000)
         "yes"
+      elsif (followers >1000) && (followers < 10000)
+        "you're getting there"
       elsif (followers - following).abs < (0.1*followers + 0.1*following).ceil
         "you are breaking even"
       elsif (following) > (10*followers)

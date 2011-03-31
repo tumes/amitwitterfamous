@@ -13,10 +13,18 @@ body {
   text-align: center;
 }
 
+#padded {
+  padding-top: 150px;
+}
+
 .box {
   margin: auto;
   width: 100%;
   text-align: center;
+}
+
+#hidden {
+  display: none;
 }
 
 .spacer {
@@ -75,7 +83,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-input#name {
+input#fameinput {
   border: 0px;
   border-bottom: 5px solid black;
   font-family: BebasNeue;
@@ -87,7 +95,7 @@ input#name {
   margin-right: 0;
 }
 
-input#name:focus {
+input#fameinput:focus {
   outline: none;
 }
 

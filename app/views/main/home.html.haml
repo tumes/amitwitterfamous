@@ -2,12 +2,14 @@
   .spacer
   .container
     %h1 Am I Twitter Famous?
-    %br/
   .box
     = form_tag('/') do
       %h1 @
-      %h1= text_field_tag :name, nil, :size => 12
-      %h1= submit_tag(">")
+      %h1= text_field_tag :name, nil, :size => 12, :id => "fameinput"
+      %h1= submit_tag(">", :id => "famebutton")
+  .footer{ :id => 'hidden'}
+    = link_to "about", about_path
+  
 - else
   .spacer
   .container
