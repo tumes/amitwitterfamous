@@ -8,7 +8,7 @@ $(document).ready(function(){
 
   var active_twitter_name = ""
 
-$('input#famebutton').click( function() {
+$('input#famebutton').live('click', function() {
   var twitter_name = $("input#fameinput").val();
     if (twitter_name == "") {
       result_appender("please enter a twitter username")
