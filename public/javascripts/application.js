@@ -2,7 +2,7 @@ $(document).ready(function(){
   
   result_appender = function(fame_level){
     $(fame_level).hide().appendTo('body').delay(600).fadeIn('slow', function() {
-      $('.footer').delay(500).fadeIn(1500)
+      $('.footer').delay(200).fadeIn(900)
     });
   };
 
