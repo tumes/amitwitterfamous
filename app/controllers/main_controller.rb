@@ -6,7 +6,7 @@ class MainController < ApplicationController
   
   def home
     if params[:name].present?
-      name = params[:name]
+      name = params[:name].gsub(/[^0-9A-Za-z_]/, '')
       url = make_url(name)
       user_info = grab_userpage(url)
       if user_info.header.to_s.include? "HTTPOK"
