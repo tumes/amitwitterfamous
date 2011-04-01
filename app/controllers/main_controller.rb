@@ -9,10 +9,10 @@ class MainController < ApplicationController
       name = params[:name]
       url = make_url(name)
       user_info = grab_userpage(url)
-      if user_info.header.to_s.include? "HTTPNotFound"
-        @fame_level = "please enter a valid twitter username"
-      else
+      if user_info.header.to_s.include? "HTTPOK"
         @fame_level = evaluate_fame(user_info)
+      else
+        @fame_level = "please enter a valid twitter username"
       end
     end
     

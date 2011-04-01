@@ -79,7 +79,7 @@ input[type="submit"] {
   background: white;
   border: none;
   cursor: pointer;
-  -webkit-appearence: none;
+  -webkit-appearance: none;
 }
 
 input#fameinput {
@@ -92,7 +92,7 @@ input#fameinput {
   padding-right: 0;
   margin-left: 0;
   margin-right: 0;
-  -webkit-appearence: none;
+  -webkit-appearance: none;
 }
 
 input#fameinput:focus {
