@@ -50,6 +50,7 @@ h1 {
   letter-spacing: -0.05em;
   margin: 0.1em;
   display:inline;
+  font-weight: normal;
 }
 
 h2 {
@@ -59,15 +60,12 @@ h2 {
   letter-spacing: -0.05em;
   margin: 0.1em;
   padding-bottom: 20px;
+  font-weight:normal;
 }
 
 h2 a {
   font-size: 0.8em;
-}
-
-h1#neon{
-  color: red;
-  text-shadow: black 4px 4px 4px;
+  font-weight: normal;
 }
 
 input[type="submit"] {
