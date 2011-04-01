@@ -20,7 +20,7 @@ $('input#famebutton').live('click', function() {
           dataType: "json",
           cache: false,
           url: '/' + twitter_name,
-          timeout: 2000,
+          timeout: 5000,
           success: function(data){
             var fame_level = "<div class='container' id='padded'><h1>" + data + "</h1></div>"
             result_appender(fame_level)
