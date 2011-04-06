@@ -10,17 +10,21 @@ $(document).ready(function(){
   var active_twitter_name = ""
 
 $('input#famebutton').live('click', function() {
-  var twitter_name = $("input#fameinput").val();
-    if (twitter_name == "") {
-      result_appender("<div class='container' id='padded'><h1>" + "please enter a twitter username" + "</h1></div>")
+  var sanitized_name = $("input#fameinput").val().replace(/[^\w]+/, '')
+  $("input#fameinput").val(sanitized_name)
+    if (sanitized_name == "") {
+      result_appender("<div class='container' id='padded'><h1>" + "please enter a valid twitter username" + "</h1></div>")
     }
-    else if (twitter_name != active_twitter_name) {
+    else if (sanitized_name != active_twitter_name) {
       $(".spacer").animate({ height: "50px"}, 600);
-      var url = 'http://twitter.com/users/show/' + twitter_name + '.json'
+      var url = 'http://twitter.com/users/show/' + sanitized_name + '.json'
         $.ajax(url, {
           crossDomain: true,
           dataType: "jsonp",
           timeout: 5000,
+          error: function() {
+            result_appender("<div class='container' id='padded'><h1>" + "that username does not exist" + "</h1></div>")
+          },
           success: function(data, text, xhqr){
             var followers = data.followers_count
             var following = data.friends_count
@@ -38,7 +42,7 @@ $('input#famebutton').live('click', function() {
             }
             var fame_level = "<div class='container' id='padded'><h1>" + fame_result + "</h1></div>"
             result_appender(fame_level)
-            active_twitter_name = twitter_name
+            active_twitter_name = sanitized_name
           }
         });
     };  
