@@ -1,9 +1,9 @@
 $(document).ready(function(){
-  
+
   result_appender = function(fame_level){
     $(".container#padded").fadeOut(300);
-    $(fame_level).hide().appendTo('body').delay(600).fadeIn('slow', function() {
-      $('.footer').delay(200).fadeIn(900)
+    $(fame_level).hide().appendTo('.box').delay(600).fadeIn('slow', function() {
+      $('.footer#about').delay(200).fadeIn(900)
     });
   };
 
@@ -46,6 +46,12 @@ $('input#famebutton').live('click', function() {
           }
         });
     };  
+    return false
+  });
+  
+  $('a').click( function(){
+    $('.bigcontainer').slideToggle();
+    $('.footer').slideToggle();
     return false
   });
 });

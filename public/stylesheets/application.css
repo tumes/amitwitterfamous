@@ -23,7 +23,7 @@ body {
   text-align: center;
 }
 
-#hidden {
+.hidden {
   display: none;
 }
 
