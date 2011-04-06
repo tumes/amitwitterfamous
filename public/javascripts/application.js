@@ -35,6 +35,8 @@ $('input#famebutton').live('click', function() {
               fame_result = 'yes'
             } else if (followers >= 1000 && followers < 10000) {
               fame_result = "you're getting there"
+            } else if (Math.abs(followers - following) < Math.ceil(0.1*followers + 0.1*following)) {
+              fame_result = "you're breaking even"
             } else if (following > 10*followers) {
               fame_result = "you're inversely twitter famous"
             } else {
