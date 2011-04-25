@@ -55,8 +55,6 @@ a {
 h1 {
   font-size: 3.5em;
   text-align: center;
-  word-spacing: 0.3em;
-  letter-spacing: -0.05em;
   margin: 0.1em;
   display:inline;
   font-weight: normal;
@@ -65,10 +63,8 @@ h1 {
 h2 {
   font-size: 2.5em;
   text-align: center;
-  word-spacing: 0.3em;
-  letter-spacing: -0.05em;
   margin: 0.1em;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   font-weight:normal;
 }
 
@@ -81,9 +77,6 @@ input[type="submit"] {
   font-family: BebasNeue;
   font-size: 1em;
   text-align: center;
-  word-spacing: 0.3em;
-  letter-spacing: -0.05em;
-/*  margin: 0.1em;*/
   display:inline;
   background: white;
   border: none;
