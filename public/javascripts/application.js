@@ -34,7 +34,7 @@ $('input#famebutton').live('click', function() {
             } else if (followers >= 10000 && followers < 250000) {
               fame_result = 'yes'
             } else if (sanitized_name == 'room_214') {
-              fame_result = "of course you are! <br> (but a new hire wouldn't hurt)"
+              fame_result = "of course you are! <br> (perfect time for a new hire)"
             } else if (followers >= 1000 && followers < 10000) {
               fame_result = "you're getting there"
             } else if (Math.abs(followers - following) < Math.ceil(0.1*followers + 0.1*following)) {
